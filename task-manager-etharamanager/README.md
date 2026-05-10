@@ -1,0 +1,66 @@
+# Task Manager (EtharaManager)
+
+A modern, full-stack Task Management application built to demonstrate robust frontend UI integrations, RESTful backend APIs, and Role-Based Access Control (RBAC).
+
+## 🚀 Live Demo
+- **Live URL**: *(Add your Railway live URL here after deployment)*
+- **Demo Video**: *(Add your 2-5 min demo video link here)*
+
+## 🛠️ Tech Stack
+- **Frontend**: Next.js (App Router), React, Tailwind CSS, Shadcn UI
+- **Backend**: Node.js, Express, TypeScript
+- **Database**: MongoDB (Mongoose)
+- **Authentication**: JWT & bcrypt
+
+## ✨ Features
+- **Authentication**: Secure JWT-based login and registration.
+- **Dashboard Analytics**: Real-time stats, time estimates, and progress tracking based on task priorities.
+- **Project Management**: Create and manage distinct projects.
+- **Task Management**: Create tasks, assign them to projects, set start/end times, filter by priority, and perform bulk deletions.
+- **Role-Based Access Control (RBAC)**: Admin users have access to an exclusive dashboard tab to view all registered users.
+- **Responsive UI**: Polished, mobile-friendly interface built with Tailwind and Shadcn UI.
+
+## 📂 Project Structure
+This repository is a monorepo containing both the frontend and backend:
+- `/frontend`: Next.js application.
+- `/task-management-server`: Express/Node.js backend.
+
+## 🏃‍♂️ Running Locally
+
+### Prerequisites
+- Node.js (v18+)
+- MongoDB (Local or Atlas URL)
+
+### Setup Backend
+```bash
+cd task-management-server
+npm install
+```
+Create a `.env` file in the backend directory:
+```env
+PORT=8000
+MONGODB_URI=mongodb://localhost:27017/task_manager # Or your Atlas URI
+JWT_SECRET=your_super_secret_key
+FRONTEND_URL=http://localhost:3000
+```
+Run the backend:
+```bash
+npm run dev
+```
+
+### Setup Frontend
+```bash
+cd frontend
+npm install
+```
+Create a `.env.local` file in the frontend directory:
+```env
+NEXT_PUBLIC_API_URL=http://localhost:8000
+```
+Run the frontend:
+```bash
+npm run dev
+```
+
+## 🌐 Deployment (Railway)
+This project is configured to be seamlessly deployed on [Railway.app](https://railway.app/). Detailed deployment instructions can be found in the project documentation.
