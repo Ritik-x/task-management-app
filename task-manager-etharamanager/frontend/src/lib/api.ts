@@ -90,7 +90,12 @@ api.interceptors.response.use(
     return response;
   },
   (error) => {
-    return Promise.reject(error);
+    // Extract the custom message from the server if it exists
+    const message = error.response?.data?.message || error.message;
+    const improvedError = new Error(message);
+    (improvedError as any).status = error.response?.status;
+    (improvedError as any).data = error.response?.data;
+    return Promise.reject(improvedError);
   }
 );
 
