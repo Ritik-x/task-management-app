@@ -67,8 +67,10 @@ export interface TaskStats {
   };
 }
 
+const baseUrl = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000').replace(/\/$/, '');
+
 const api = axios.create({
-  baseURL: `${process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000'}/api`,
+  baseURL: `${baseUrl}/api`,
   headers: {
     'Content-Type': 'application/json',
   },
