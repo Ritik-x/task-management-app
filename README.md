@@ -3,6 +3,11 @@
 Live Demo:  
 👉 https://task-management-app-production-6b30.up.railway.app/
 
+
+🔗 Project Repositories
+Frontend (Current): https://github.com/Ritik-x/task-management-app
+
+Backend API: https://github.com/Ritik-x/task-management-server
 ---
 
 ## 📌 Project Overview
