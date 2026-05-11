@@ -5,9 +5,14 @@ Live Demo:
 
 
 🔗 Project Repositories
-Frontend (Current): https://github.com/Ritik-x/task-management-app
 
+
+
+
+Frontend (Current): https://github.com/Ritik-x/task-management-app
 Backend API: https://github.com/Ritik-x/task-management-server
+
+
 ---
 
 ## 📌 Project Overview
