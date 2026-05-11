@@ -1,4 +1,4 @@
-# 🚀 Task Management App (Ethara AI Assignment)
+# 🚀 Task Management App (E- AI Assignment)
 
 Live Demo:  
 👉 https://task-management-app-production-6b30.up.railway.app/
