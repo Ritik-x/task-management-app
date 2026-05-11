@@ -85,6 +85,11 @@ api.interceptors.request.use((config) => {
   return config;
 });
 
+interface ApiError extends Error {
+  status?: number;
+  data?: unknown;
+}
+
 api.interceptors.response.use(
   (response) => {
     return response;
@@ -92,9 +97,9 @@ api.interceptors.response.use(
   (error) => {
     // Extract the custom message from the server if it exists
     const message = error.response?.data?.message || error.message;
-    const improvedError = new Error(message);
-    (improvedError as any).status = error.response?.status;
-    (improvedError as any).data = error.response?.data;
+    const improvedError: ApiError = new Error(message);
+    improvedError.status = error.response?.status;
+    improvedError.data = error.response?.data;
     return Promise.reject(improvedError);
   }
 );
