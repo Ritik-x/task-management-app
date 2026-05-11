@@ -120,3 +120,17 @@ The goal of this project is to demonstrate **real-world full-stack development s
 ```bash
 npm install
 npm run dev
+
+```
+### backend
+```bash
+npm install
+npm run dev
+```
+
+### ENV
+```bash
+PORT=8000
+MONGODB_URI=your_mongodb_connection_string
+JWT_SECRET=your_secret_key
+FRONTEND_URL=http://localhost:3000
